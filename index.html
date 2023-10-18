@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reset -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Style css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>HANJOY</title>
+  </head>
+  <body>
+    <div class="main__content">
+      <div class="header__contacts">
+        <a href=""><img src="./assets/img/logo.png" alt="" /></a>
+        <div class="header__contact">
+          <div class="contact__items">
+            <div class="contact__item">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="info">
+                <span>Email</span>
+                <span
+                  ><a href="mailto:dangtien.tdt@gmail.com">cs@hanjoy.net</a>
+                </span>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="fa-solid fa-phone"></i>
+              <div class="info">
+                <span>Hotline</span>
+                <span><a href="tel:084280068">+84 5 6213 5090</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn">
+          <a class="btn__sendEmail" href="mailto:dangtien.tdt@gmail.com"
+            >SEND EMAIL</a
+          >
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="main__content">
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About Us</a>
+            </li>
+            <li class="down__hover">
+              <a href="#!"
+                >Business Areas
+                <i class="fa-solid fa-chevron-down arrow__down"></i
+              ></a>
+              <ul class="nav__sub">
+                <li>
+                  <a href="#!">Hancare</a>
+                </li>
+                <li>
+                  <a href="#!">Food & Beverage</a>
+                </li>
+                <li>
+                  <a href="#!">Beauty & Cosmetics</a>
+                </li>
+                <li>
+                  <a href="#!">Inversment Consultancy</a>
+                </li>
+                <li>
+                  <a href="#!">Garmaent & Fashion</a>
+                </li>
+                <li>
+                  <a href="#!">Real Estate</a>
+                </li>
+                <li>
+                  <a href="#!">Education Consultancy</a>
+                </li>
+                <li>
+                  <a href="#!">M.I.C.E & Tourism</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">News</a>
+            </li>
+            <li>
+              <a href="#!">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="navbar__icons">
+            <a href="#!"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#!">
+              <div class="navbar__icon"></div>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="main_content">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="./assets/img/3.jpg" style="width: 100%" />
+            <div class="banner_content">
+              <h1 class="heading">
+                HANJOY<br />
+                COMPANY LTD
+              </h1>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti ipsum ratione fugit nobis explicabo vel?
+              </p>
+              <div class="btn btn__our">
+                <a style="color: #fff" href="#!">OUR COMPANY</a>
+              </div>
+              <div class="btn__contact">
+                <a href="#!">CONTACT US</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./assets/img/8.jpg" style="width: 100%" />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="banner__dot" style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+
+        <!-- <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

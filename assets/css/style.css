@@ -1,0 +1,465 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --smooth: all 0.5s ease-in;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif; */
+}
+/* Common */
+
+a {
+  text-decoration: none;
+}
+
+.main__content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  width: 190px;
+  height: 48px;
+  font-size: 19px;
+  color: #fff;
+  letter-spacing: 1;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, #f06, #604183, #f06);
+  background-size: 200%;
+  background-position: 0 0;
+  z-index: -1;
+  border-radius: 15px;
+  filter: blur(5px);
+  transition: 0.5s ease;
+}
+
+.btn:hover::before {
+  position: 100% 0;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, #f06, #604183, #f06);
+  background-position: 0 0;
+  z-index: -1;
+  border-radius: 15px;
+  background-size: 200%;
+  transition: 0.5s ease;
+}
+
+.btn:hover::after {
+  background-position: 100% 0px;
+}
+
+/* Header */
+
+/* Header contacts */
+.header__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.header__contact {
+  margin-left: auto;
+}
+
+.header__contacts img {
+  width: 1;
+  height: 100px;
+}
+
+.header__contacts .btn {
+  margin-left: 40px;
+}
+
+.btn .btn__sendEmail {
+  color: #fff;
+}
+
+.header__contact .contact__items {
+  display: flex;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+}
+
+.contact__item i {
+  color: red;
+  font-size: 25px;
+}
+
+.contact__item .info {
+  padding: 0 20px;
+}
+
+.contact__item span {
+  display: block;
+  line-height: 2;
+}
+
+/* Nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 15px;
+}
+
+.nav__sub {
+  position: absolute;
+  background-color: #ccc;
+  border-radius: 20px;
+  display: none;
+  transition: var(--smooth);
+  animation: slideTop 0.8s forwards;
+}
+.nav__sub li:first-child a {
+  padding: 20px 25px;
+}
+
+.down__hover:hover .nav__sub {
+  display: block;
+  transition: var(--smooth);
+}
+
+header .navbar {
+  display: flex;
+}
+
+header .navbar li {
+  padding: 0 25px;
+  transition: var(--smooth);
+}
+
+header .navbar li .arrow__down {
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+header .navbar li a {
+  position: relative;
+  font-size: 1.6rem;
+  padding: 20px 0;
+  display: block;
+  color: #2f2b2b;
+  font-weight: 600;
+  transition: var(--smooth);
+}
+
+header .navbar li:first-child {
+  padding-left: 0;
+}
+
+header .navbar li a::before {
+  content: "";
+  position: absolute;
+  box-shadow: rgb(136, 136, 136) 5px 3px 5px;
+  width: 0%;
+  bottom: 30%;
+  height: 3px;
+  background: black;
+  transition: var(--smooth);
+}
+
+header .navbar li a:hover::before {
+  content: "";
+  position: absolute;
+  box-shadow: rgb(136, 136, 136) 5px 3px 5px;
+  width: 100%;
+  bottom: 30%;
+  height: 3px;
+  background: black;
+  transition: var(--smooth);
+}
+
+header .navbar__icons {
+  margin-left: 100px;
+  width: 90px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+header .navbar__icons a:first-child {
+  font-size: 20px;
+}
+
+header .navbar__icons a:hover {
+  transform: scale(1.2);
+}
+
+header .navbar__icon {
+  position: relative;
+  margin-left: 10px;
+  height: 2.2px;
+  width: 25px;
+  background: black;
+  transition: var(--smooth);
+  transition-delay: 0.2s;
+}
+
+header .navbar__icon::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -7px;
+  height: 2.2px;
+  width: 14px;
+  background: black;
+  transition: var(--smooth);
+  transition-delay: 0.2s;
+}
+header .navbar__icon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  height: 2.2px;
+  width: 20px;
+  background: black;
+  transition: var(--smooth);
+  transition-delay: 0.2s;
+}
+
+header .navbar__icon:hover,
+header .navbar__icon:hover::before,
+header .navbar__icon:hover::after {
+  height: 2.2px;
+  width: 30px;
+  background: black;
+  transition: var(--smooth);
+}
+
+/* Animation */
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Banner */
+
+.mySlides img {
+  display: block;
+  height: 100vh;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.banner__dot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* content banner */
+
+.banner_content {
+  position: absolute;
+  max-width: 40%;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner_content .heading {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 4.9rem;
+  font-weight: 800;
+  color: #fff;
+  transition: var(--smooth);
+  animation: slide_down 0.7s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.banner_content .desc {
+  margin: 40px 0;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #fff;
+  transition: var(--smooth);
+  animation: slide_up 0.7s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.btn__contact {
+  margin-left: 20px;
+  display: inline;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 12px 20px;
+
+  transition: var(--smooth);
+  animation: slide_up 0.7s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.btn__our {
+  animation: slide_up 0.7s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.btn__contact a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn__contact:hover {
+  opacity: 0.7;
+}
+
+@keyframes slide_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide_up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
